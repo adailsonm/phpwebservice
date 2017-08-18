@@ -17,7 +17,7 @@ class ClientsController extends Controller
 {
     public function index()
     {
-        return Client::all();
+        return son_response(Client::all());
     }
 
     public function show($id)
@@ -47,7 +47,7 @@ class ClientsController extends Controller
 
         $this->validate($request, [
             'name' => 'required',
-            'email' => 'required',.
+            'email' => 'required',
             'phone' => 'required',
         ]);
 
